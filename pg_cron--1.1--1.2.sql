@@ -1,3 +1,4 @@
+
 /* pg_cron--1.1--1.2.sql */
 
 CREATE FUNCTION cron.schedule(schedule interval, command text)
