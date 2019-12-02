@@ -7,3 +7,6 @@ CREATE FUNCTION cron.schedule(schedule interval, command text)
     AS 'MODULE_PATHNAME', $$cron_schedule_interval$$;
 COMMENT ON FUNCTION cron.schedule(interval,text)
     IS 'schedule a pg_cron job to run periodically';
+
+SELECT pg_catalog.pg_extension_config_dump('cron.job', '');
+SELECT pg_catalog.pg_extension_config_dump('cron.jobid_seq', '');
